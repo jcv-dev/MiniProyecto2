@@ -1,6 +1,5 @@
 
 
-
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 public class Insertar extends javax.swing.JPanel {
@@ -288,7 +287,7 @@ public class Insertar extends javax.swing.JPanel {
         
         // Validacion de campo Nombre y posterior asignacion
         if(txtNombre.getText().length() == 0){
-            JOptionPane.showMessageDialog(null, "No se ha ingresado un nombre de dulce.");
+            JOptionPane.showMessageDialog(jPanel1, "No se ha ingresado un nombre de dulce.");
             return;
         }
         String nombreDulce = txtNombre.getText();
@@ -304,7 +303,7 @@ public class Insertar extends javax.swing.JPanel {
         }else if(rdoSinAzucar.isSelected()){
             tipoDulce = TipoDulce.SIN_AZUCAR;
         }else{
-            JOptionPane.showMessageDialog(null, "No se ha ingresado un tipo de dulce.");
+            JOptionPane.showMessageDialog(jPanel1, "No se ha ingresado un tipo de dulce.");
             return;
         }
         
@@ -351,7 +350,7 @@ public class Insertar extends javax.swing.JPanel {
         Dulce dulce = new Dulce(nombreDulce, tipoDulce, porcentajeGrasa, excesoSodio, excesoAzucar, excesoSaturadas, excesoTrans, contieneEdulcorantes, marca);
         listaDulces.add(dulce);
         
-        JOptionPane.showMessageDialog(null, "Dulce agregado satisfactoriamente.");
+        JOptionPane.showMessageDialog(jPanel1, "Dulce agregado satisfactoriamente.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public ArrayList<Dulce> getListaDulces(){

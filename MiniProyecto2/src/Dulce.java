@@ -1,5 +1,4 @@
 
-
 class Dulce {
     
     private String nombreDulce;
@@ -95,6 +94,34 @@ class Dulce {
         }
         return tipoString;
     }
+
+    public void setNombreDulce(String nombreDulce) {
+        this.nombreDulce = nombreDulce;
+    }
+
+    public void setTipoDulce(TipoDulce tipoDulce) {
+        this.tipoDulce = tipoDulce;
+    }
+    
+    public void setEtiquetas(boolean sodio, boolean azucar, boolean saturadas, boolean trans, boolean edulcorantes){
+        
+        this.excesoSodio = sodio;
+        this.excesoAzucar = azucar;
+        this.excesoSaturadas = saturadas;
+        this.excesoTrans = trans;
+        this.contieneEdulcorantes = edulcorantes;
+    }
+
+    public void setMarca(Marca marca) {
+        this.marca = marca;
+    }
+
+    public void setPorcentajeGrasa(byte porcentajeGrasa) {
+        this.porcentajeGrasa = porcentajeGrasa;
+    }
+    
+    
+    
  
 
     
