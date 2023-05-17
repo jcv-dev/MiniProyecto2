@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -9,9 +7,6 @@ public class Buscar extends javax.swing.JPanel {
     public Buscar(ArrayList<Dulce> listaDulces) {
         this.listaDulces = listaDulces;
         initComponents();
-        if(listaDulces.isEmpty()){
-            JOptionPane.showMessageDialog(jPanel1, "No se ha agregado ningun dulce.");
-        }
     }
 
     

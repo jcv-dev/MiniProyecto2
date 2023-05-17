@@ -92,7 +92,7 @@ public class Listar extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void listarDulces(){
         if(listaDulces.isEmpty()){
-            JOptionPane.showMessageDialog(this, "No se ha agregado ningun dulce.");
+            JOptionPane.showMessageDialog(jPanel1, "No se ha agregado ningun dulce.");
         }else{
             
             araTexto.append("------------------------------------------------------------------------------------------------------------------------------\n");

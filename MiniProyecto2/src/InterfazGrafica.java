@@ -1,8 +1,10 @@
 
 
+
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Collections;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class InterfazGrafica extends javax.swing.JFrame {
@@ -186,6 +188,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
             Collections.copy(listaDulces, actualizar.getListaDulces());
         }
         
+        if(listaDulces.isEmpty()){
+            JOptionPane.showMessageDialog(content, "No se ha agregado ningun dulce.");
+        }
+        
         eliminar = new Eliminar(listaDulces);
         isInsertar = false;
         isEliminar = true;
@@ -196,6 +202,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
         if(isInsertar){
             Collections.copy(listaDulces, insertar.getListaDulces());
+        }else if(isEliminar){
+            Collections.copy(listaDulces, eliminar.getListaDulces());
+        }else if(isActualizar){
+            Collections.copy(listaDulces, actualizar.getListaDulces());
         }
         
         insertar = new Insertar(listaDulces);
@@ -208,8 +218,16 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         if(isInsertar){
             Collections.copy(listaDulces, insertar.getListaDulces());
+        }else if(isEliminar){
+            Collections.copy(listaDulces, eliminar.getListaDulces());
+        }else if(isActualizar){
+            Collections.copy(listaDulces, actualizar.getListaDulces());
         }
-                
+        
+        if(listaDulces.isEmpty()){
+            JOptionPane.showMessageDialog(content, "No se ha agregado ningun dulce.");
+        }
+        
         actualizar = new Actualizar(listaDulces);
         isInsertar = false;
         isEliminar = false;
@@ -220,6 +238,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         if(isInsertar){
             Collections.copy(listaDulces, insertar.getListaDulces());
+        }else if(isEliminar){
+            Collections.copy(listaDulces, eliminar.getListaDulces());
+        }else if(isActualizar){
+            Collections.copy(listaDulces, actualizar.getListaDulces());
+        }
+        
+        if(listaDulces.isEmpty()){
+            JOptionPane.showMessageDialog(content, "No se ha agregado ningun dulce.");
         }
         
         Buscar buscar = new Buscar(listaDulces);
@@ -232,6 +258,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
         if(isInsertar){
             Collections.copy(listaDulces, insertar.getListaDulces());
+        }else if(isEliminar){
+            Collections.copy(listaDulces, eliminar.getListaDulces());
+        }else if(isActualizar){
+            Collections.copy(listaDulces, actualizar.getListaDulces());
         }
         
         Listar listar = new Listar(listaDulces);
